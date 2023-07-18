@@ -30,7 +30,7 @@ jobs:
           export ALTSERVER_HOST="127.0.0.1"
 
       - name: 'Running test on BrowserStack'
-        run: dotnet test Bindings~/dotnet/AltDriver.Tests/AltDriver.Tests.csproj --logger:"console;verbosity=detailed"
+        run: dotnet test tests/TestAlttrashCSharp.csproj --logger:"console;verbosity=detailed"
 
       - name: 'BrowserStackLocal Stop'  # Terminating the BrowserStackLocal tunnel connection
         uses: browserstack/github-actions/setup-local@master
